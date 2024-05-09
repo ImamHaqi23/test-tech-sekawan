@@ -15,6 +15,7 @@ import { useNavigate } from 'react-router-dom';
 import TopCard from '../component/topCard';
 import CenterCard from '../component/centerCard';
 import UnTicket from '../component/unTicket';
+import { useDarkMode } from '../context/DarkModeContext';
 
 interface ValueState {
   unresolved: number;
@@ -82,6 +83,7 @@ const data = [
 const Dashboard = () => {
   const [value, setValue] = useState<ValueState>();
   const navigate = useNavigate();
+  const { darkMode } = useDarkMode();
   const getData = async () => {
     try {
       const response = await axios.get(`/overview`);
@@ -100,7 +102,11 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="mx-6 mt-7">
+    <div
+      className={`mx-6 mt-7  ${
+        darkMode ? 'bg-[#363740] text-white' : 'bg-white text-black'
+      }`}
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-7">
         <TopCard title="Unresolved" value={value?.unresolved} />
         <TopCard title="Overdue" value={value?.overdue} />
@@ -108,7 +114,11 @@ const Dashboard = () => {
         <TopCard title="On hold" value={value?.onHold} />
       </div>
 
-      <div className=" bg-white mt-7 rounded-md border">
+      <div
+        className={`${
+          darkMode ? 'bg-[#363740]' : 'bg-white'
+        } mt-7 rounded-md border`}
+      >
         <div className=" grid grid-cols-1 lg:grid-cols-12">
           <div className="flex flex-col col-span-8 p-5">
             <h3 className="text-lg font-semibold">Today's trends</h3>
@@ -174,7 +184,11 @@ const Dashboard = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 my-7 gap-5">
-        <div className="bg-white col-span-6 rounded-md border">
+        <div
+          className={`${
+            darkMode ? 'bg-[#2B2C37]' : 'bg-white'
+          } col-span-6 rounded-md border`}
+        >
           <div className="flex justify-between p-5">
             <div>
               <h1 className="text-lg font-semibold">Unresolved Ticket</h1>
@@ -194,7 +208,11 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="bg-white col-span-6 rounded-md border">
+        <div
+          className={`${
+            darkMode ? 'bg-[#2B2C37]' : 'bg-white'
+          } col-span-6 rounded-md border`}
+        >
           <div className="flex justify-between p-5">
             <div>
               <h1 className="text-lg font-semibold">Tasks</h1>

@@ -1,6 +1,7 @@
 import { SlOptionsVertical } from 'react-icons/Sl';
 import { FaSortAmountUp, FaFilter } from 'react-icons/fa';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
+import { useDarkMode } from '../context/DarkModeContext';
 
 const data = [
   {
@@ -50,11 +51,16 @@ const data = [
 ];
 
 const Ticket = () => {
+  const { darkMode } = useDarkMode();
   return (
     <div className="mx-6 mt-7">
-      <div className="bg-white">
+      <div
+        className={`${darkMode ? 'bg-[#363740]' : 'bg-white'} border rounded`}
+      >
         <div className="flex justify-between p-5">
-          <h1 className="text-lg font-semibold">All tickets</h1>
+          <h1 className={`text-lg font-semibold ${darkMode && 'text-white'}`}>
+            All tickets
+          </h1>
           <div className="flex gap-5">
             <div className="flex gap-2 justify-center items-center text-slate-400 text-sm">
               <span>
@@ -91,7 +97,10 @@ const Ticket = () => {
             <tbody>
               {data.map((item, index) => {
                 return (
-                  <tr key={index} className="border-b-2">
+                  <tr
+                    key={index}
+                    className={`${darkMode && 'text-white'} border-b-2`}
+                  >
                     <td className="px-6 py-4">
                       <div className="flex gap-5">
                         <img
@@ -149,7 +158,7 @@ const Ticket = () => {
             </tbody>
           </table>
         </div>
-        <div className="flex justify-end gap-14 text-sm text-slate-400 mx-6 mt-7">
+        <div className="flex justify-end gap-14 text-sm text-slate-400 mx-6 my-5">
           <div className="flex">
             <h3>Row per page:</h3>
             <select className="font-bold">
