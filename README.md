@@ -29,13 +29,11 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ImamHaqi23/Sekawan-test
-   cd Sekawan-test
-   npm install
+   git clone https://github.com/ImamHaqi23/test-tech-sekawan
 2. Navigate to the project directory:
 
     ```bash
-   cd Sekawan-test
+   cd test-tech-sekawan
 3. Install dependencies using npm:
 
     ```bash
@@ -45,7 +43,11 @@ To run this project locally, follow these steps:
    npm run dev
    http://localhost:5173/
 5. Manage User Permission:
-   - Email ( can use random emails as long as they use the email writing format ).
-   - Password ( can use random passwords as long as they are at least 8 characters long ).
+   - Admin
+      * Email : admin@mail.com
+      * Password : admin123
+   - Guest
+      * Email : guest@mail.com
+      * Password : guest123
    
     
