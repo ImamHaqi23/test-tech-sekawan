@@ -1,4 +1,4 @@
-import { SlOptionsVertical } from 'react-icons/Sl';
+import { SlOptionsVertical } from 'react-icons/sl';
 import { FaSortAmountUp, FaFilter } from 'react-icons/fa';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import { useDarkMode } from '../context/DarkModeContext';
