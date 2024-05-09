@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 import { useDarkMode } from '../context/DarkModeContext';
 import { useNavigate } from 'react-router-dom';
 import { IoIosMoon, IoIosSunny } from 'react-icons/io';
-import profile from '../public/pro-person.png';
+import profile from '../../public/pro-person.png';
 
 interface ValueTitle {
   currentTitle: string;
