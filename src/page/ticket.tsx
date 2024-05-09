@@ -2,11 +2,12 @@ import { SlOptionsVertical } from 'react-icons/sl';
 import { FaSortAmountUp, FaFilter } from 'react-icons/fa';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import { useDarkMode } from '../context/DarkModeContext';
+import profile from '../public/pro-person.png';
 
 const data = [
   {
     id: 1,
-    img: '../../public/pro-person.png',
+    img: profile,
     problem: 'Contact Email not Linked',
     update: 'Update 1 day ago',
     name: 'Tom Cruise',
@@ -17,7 +18,7 @@ const data = [
   },
   {
     id: 2,
-    img: '../../public/pro-person.png',
+    img: profile,
     problem: 'Adding Images to Featured Posts',
     update: 'Update 1 day ago',
     name: 'Mat Damon',
@@ -28,7 +29,7 @@ const data = [
   },
   {
     id: 3,
-    img: '../../public/pro-person.png',
+    img: profile,
     problem: 'When will I be charged this month?',
     update: 'Update 1 day ago',
     name: 'Robert Dawney',
@@ -39,7 +40,7 @@ const data = [
   },
   {
     id: 4,
-    img: '../../public/pro-person.png',
+    img: profile,
     problem: 'Payment not going through',
     update: 'Update 2 day ago',
     name: 'Christian Bale',
