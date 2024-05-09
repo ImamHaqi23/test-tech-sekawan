@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface DarkModeContextType {
   darkMode: boolean;
@@ -18,7 +18,13 @@ export const useDarkMode = () => {
   return context;
 };
 
-export const DarkModeProvider: React.FC = ({ children }) => {
+interface DarkModeProviderProps {
+  children: ReactNode;
+}
+
+export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
+  children,
+}) => {
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
