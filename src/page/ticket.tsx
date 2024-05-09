@@ -2,7 +2,7 @@ import { SlOptionsVertical } from 'react-icons/sl';
 import { FaSortAmountUp, FaFilter } from 'react-icons/fa';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import { useDarkMode } from '../context/DarkModeContext';
-import profile from '../public/pro-person.png';
+import profile from '../../public/pro-person.png';
 
 const data = [
   {
